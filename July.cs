@@ -15,9 +15,12 @@ namespace Practical_Workshop_1
         {
             horses.Add(horse);
         }
-        public void displarRoster()
+        public void displayRoster(TextBox textBox)
         {
-
+            foreach(Horse horse in horses)
+            {
+                textBox.Text = horse.horseDetails();
+            }
         }
         public Horse favourite()
         {

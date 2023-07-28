@@ -17,48 +17,22 @@ namespace Practical_Workshop_1
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void horseName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void addButton_Click(object sender, EventArgs e)
         {
+            string horseName = horseNameInput.Text;
+            int horseAge = Convert.ToInt32(horseAgeInput.Text) ;
+            int horseHeight = Convert.ToInt32(horseHeightInput.Text);
+          
+            
+            double[] times = new double[] { Convert.ToDouble(time1Input.Text),Convert.ToDouble(time2Input.Text), Convert.ToDouble(time3Input.Text) }
 
-        }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
+            Horse newHorse = new Horse(horseName, horseAge, horseHeight, times);
 
         }
     }
