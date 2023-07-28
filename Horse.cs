@@ -15,17 +15,23 @@ namespace Practical_Workshop_1
             this.name = name;
             this.age = age;
             this.height = height;
-            times = new double[3];
+            this.times = times;
          }
 
       
         public string horseDetails()
         {
-            return $"Name: {name}\tAge: {age}\tHeight: {height}\tAverage run : {averageTime()}";
+            return $"Name: {name}\tAge: {age}\tHeight: {height}\tAverage run : {averageTime()} \n";
         }
         public double averageTime()
         {
-            return times.Average();
+           double  sum = 0;
+          foreach(double i in times)
+            {
+                sum += i;
+
+            }
+            return sum / 3;
         }
  
 

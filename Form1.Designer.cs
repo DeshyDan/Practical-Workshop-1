@@ -44,7 +44,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RosterDisplay = new System.Windows.Forms.TextBox();
             this.predictButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -191,7 +191,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.RosterDisplay);
             this.groupBox2.Location = new System.Drawing.Point(354, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(683, 484);
@@ -199,13 +199,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Roster";
             // 
-            // textBox1
+            // RosterDisplay
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 26);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(657, 441);
-            this.textBox1.TabIndex = 0;
+            this.RosterDisplay.Location = new System.Drawing.Point(15, 26);
+            this.RosterDisplay.Multiline = true;
+            this.RosterDisplay.Name = "RosterDisplay";
+            this.RosterDisplay.Size = new System.Drawing.Size(657, 441);
+            this.RosterDisplay.TabIndex = 0;
+            this.RosterDisplay.Text = "================================================\r\n                      Roster fo" +
+    "r next race\r\n================================================";
+            this.RosterDisplay.TextChanged += new System.EventHandler(this.RosterDisplay_TextChanged);
             // 
             // predictButton
             // 
@@ -215,6 +218,7 @@
             this.predictButton.TabIndex = 14;
             this.predictButton.Text = "Predict next winner";
             this.predictButton.UseVisualStyleBackColor = true;
+            this.predictButton.Click += new System.EventHandler(this.predictButton_Click);
             // 
             // Form1
             // 
@@ -244,7 +248,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox RosterDisplay;
         private System.Windows.Forms.TextBox horseHeightInput;
         private System.Windows.Forms.TextBox horseAgeInput;
         private System.Windows.Forms.TextBox horseNameInput;

@@ -10,6 +10,7 @@ namespace Practical_Workshop_1
     internal class July
     {
         List<Horse> horses = new List<Horse>();
+        private HashSet<Horse> displayedHorses = new HashSet<Horse>();
 
         public void addHorse(Horse horse)
         {
@@ -17,10 +18,20 @@ namespace Practical_Workshop_1
         }
         public void displayRoster(TextBox textBox)
         {
-            foreach(Horse horse in horses)
+
+
+            foreach (Horse horse in horses)
             {
-                textBox.Text = horse.horseDetails();
+                if (!displayedHorses.Contains(horse))
+                {
+                    textBox.AppendText(Environment.NewLine);
+                    textBox.AppendText(horse.horseDetails() + "\n");
+                    displayedHorses.Add(horse);
+                }
             }
+
+
+
         }
         public Horse favourite()
         {
